@@ -34,35 +34,35 @@
         <h1 class="text-center mb-4"> Réservation de Bungalow 🏠 </h1>
         <br>
         <div class="card shadow p-4">
-            <h2 class="text-center mb-4">Entrez vos informations 📝 </h2>
-            <form>
+            <h2 class="text-center mb-4"> Entrez vos informations 📝 </h2>
+            <form action="http://localhost:700/reservation" method="post">
                 <div class="row g-3 mb-3">
                     <div class="col-md-6">
                         <label for="name" class="form-label">Prénom</label>
-                        <input type="text" id="name" class="form-control" placeholder="Votre prénom" required>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Votre prénom" required>
                     </div>
                     <div class="col-md-6">
                         <label for="lastname" class="form-label">Nom</label>
-                        <input type="text" id="lastname" class="form-control" placeholder="Votre nom" required>
+                        <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Votre nom" required>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="mail" class="form-label">Adresse mail</label>
-                    <input type="email" id="mail" class="form-control" placeholder="Votre adresse email" required>
+                    <input type="email" id="mail" name="mail" class="form-control" placeholder="Votre adresse email" required>
                 </div>
                 <div class="row g-3 mb-3">
                     <div class="col-md-6">
                         <label for="adult" class="form-label">Nombre d'adultes</label>
-                        <input type="number" id="adult" class="form-control" placeholder="0" required>
+                        <input type="number" id="adult" name="adult" class="form-control" placeholder="0" required>
                     </div>
                     <div class="col-md-6">
                         <label for="child" class="form-label">Nombre d'enfants</label>
-                        <input type="number" id="child" class="form-control" placeholder="0" required>
+                        <input type="number" id="child" name="child" class="form-control" placeholder="0">
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="suite" class="form-label">Choisissez une suite</label>
-                    <select id="suite" class="form-select" required>
+                    <label for="suit" class="form-label">Choisissez une suite</label>
+                    <select id="suit" name="suit" class="form-select" required>
                         <option value="">Sélectionnez une suite</option>
                         <option value="solo">Suite solo</option>
                         <option value="duo">Suite duo</option>
@@ -73,14 +73,14 @@
                 <div class="row g-3 mb-3">
                     <div class="col-md-6">
                         <label for="arv_date" class="form-label">Date d'arrivée</label>
-                        <input type="datetime-local" id="arv_date" class="form-control" required>
+                        <input type="date" id="arv_date" name="arv_date" class="form-control" required>
                     </div>
                     <div class="col-md-6">
                         <label for="dep_date" class="form-label">Date de départ</label>
-                        <input type="datetime-local" id="dep_date" class="form-control" required>
+                        <input type="date" id="dep_date" name="dep_date" class="form-control" required>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary w-100"> Validation de la réservation </button>
+                <button type="submit" class="btn btn-primary w-100">Validation de la réservation</button>
             </form>
         </div>
     </div>
